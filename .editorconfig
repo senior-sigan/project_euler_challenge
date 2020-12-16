@@ -2,7 +2,7 @@ root = true
 
 [*]
 indent_style = space
-max_line_length = 120
+max_line_length = 80
 
 [*.{cpp,hpp,c,h,mm}]
 trim_trailing_whitespace = true

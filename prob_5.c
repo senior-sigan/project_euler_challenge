@@ -1,8 +1,10 @@
 /**
  * Project Euler: Problem 5: Smallest multiple
- * 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+ * 2520 is the smallest number that can be divided by each of the numbers from 1
+ * to 10 without any remainder.
  *
- * What is the smallest positive number that is evenly divisible by all of the numbers from 1 to n?
+ * What is the smallest positive number that is evenly divisible by all of the
+ * numbers from 1 to n?
  */
 
 #include <assert.h>
@@ -20,7 +22,7 @@ int how_deep_div(int n, int d) {
 }
 
 int smallestMult(int n) {
-  int* sieve = (int*) calloc(n - 1, sizeof(int));
+  int* sieve = (int*)calloc(n - 1, sizeof(int));
   // n = 9
   // [2 3 4 5 6 7 8 9] len = n - 1 = 8
   // [1 1 1 1 1 1 1 1]
