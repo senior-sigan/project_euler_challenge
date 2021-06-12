@@ -17,6 +17,10 @@ pub fn multiples_of_3_and_5(number: i32) -> i32 {
     return sum;
 }
 
+pub fn multiples_of_3_and_5_lambda(number: i32) -> i32 {
+    (0..number).filter(|i| i % 3 == 0 || i % 5 == 0).sum()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -28,5 +32,14 @@ mod tests {
         assert_eq!(multiples_of_3_and_5(1000), 233168);
         assert_eq!(multiples_of_3_and_5(8456), 16687353);
         assert_eq!(multiples_of_3_and_5(19564), 89301183);
+    }
+
+    #[test]
+    fn test_all_lambda() {
+        assert_eq!(multiples_of_3_and_5_lambda(10), 23);
+        assert_eq!(multiples_of_3_and_5_lambda(49), 543);
+        assert_eq!(multiples_of_3_and_5_lambda(1000), 233168);
+        assert_eq!(multiples_of_3_and_5_lambda(8456), 16687353);
+        assert_eq!(multiples_of_3_and_5_lambda(19564), 89301183);
     }
 }
